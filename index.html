@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Geometric Sequence Technique for Effective RTO Estimation in CoAP</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+</head>
+<body>
+  <nav class="blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><center><font size = "+1">Geometric Sequence Technique for Effective RTO Estimation in CoAP</font></center></a>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h4 class="header center orange-text">Implementation of a Geometric Sequence Technique for Effective RTO Estimation in CoAP</h4>
+      <div class="row center">
+        <h6 class="header col s12 dark">Authors : Vishal Rathod and Mohit P. Tahiliani</h6>
+        <!--<h6 class="header col s12 dark">Mentor : Mohit P. Tahiliani</h6>-->
+      </div>
+      <div class="row center">
+        <a href="https://github.com/vishal623/contiki-new/" id="download-button" class="btn-large waves-effect waves-light orange">Github</a>
+          <!--<a href="https://drive.google.com/file/d/1tG6aDQsgvXiHrP_Gavo5DvYg05igPTi8/view?usp=sharing" id="download-button" class="btn-large waves-effect waves-light orange">Changefiles</a>-->
+          <a href="https://github.com/vishal623/contiki-new/tree/master/Results" id="download-button" class="btn-large waves-effect waves-light orange">Results</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m12">
+            
+            <h4>Introduction</h4><br/>
+
+            <p class="light" style="text-align:justify">
+
+            In this work, we propose a Geometric Sequence Technique (GST) for effective RTO estimation in CoAP. CoAP uses a fixed RTO value with BEB in case of retransmissions. Two new techniques, namely Fullbackoff1 variant and Fullbackoff2 variant are proposed to improve the RTO estimation in CoAP. These techniques do not use RTT measurements; hence, the working of original CoAP algorithm remains largely unaffected. Unlike CoAP, both variants avoid resetting the RTO immediately after receiving an ACK for the retransmitted packet. GST is a simple enhancement to the Fullbackoff2 variant. GST retains the previous RTO value after having received the ACK for the retransmitted packet and eventually returns to the default value by decreasing the RTO depending on the number of consecutive successful transmissions. Our work shows that GST minimizes the Flow Completion Times (FCT), reduces the number retransmissions and improves the network throughput.       
+            </p>
+	          <div class="center" float="left" width="24%" padding="5px">
+		          <img src="Vishal_Diagram_coap.jpg" alt="Working of CoAP" width=300 height="540">
+		          <img src="Vishal_Diagram_coap_v1.jpg" alt="Working of Fullbackoff1 variant" width=300 height="540">
+		          <img src="Vishal_Diagram_coap_v2.jpg" alt="Working of Fullbackoff2 variant" width=300 height="540">
+		          <img src="Vishal_Diagram_coap_v3.jpg" alt="Working of GST for RTO estimation in CoAP" width=300 height="540">
+	          </div>
+        </div>
+        </div>
+        
+        <div class="row">
+        <div class="col s12 m10">
+            
+            <h5>Steps to Reproduce the results</h5><br/>
+
+            <p class="light">
+            <ol>
+                <li class="light">Clone the Contiki OS repository : <a href="https://github.com/vishal623/contiki-new/">Link</a></li>
+                <li class="light">Compile the Contiki with "sudo ant jar" or "ant jar"</li>
+                <li class="light" >Run the Cooja with "sudo ant run" or "ant run"</li>
+                <li class="light">GST can now be built and run on FIT/IoT Lab.</li>
+            </ol>
+            </p>
+        </div>
+        </div>
+      
+      <div class="row">
+        <div class="col s12 m10">
+            
+            <h5>Future Work</h5><br/>
+
+            <p class="light">
+              <ol>
+                <li class="light">Evaluate GST against a variety of real-time IoT flows, such as the bursty traffic.</li>
+                <li class="light">Consider other evaluation parameters such as energy consumption, etc.</li>               
+                <li class="light">Check the efficiency of our implementation in IoTivity platform.</li>
+                
+              </ol>
+                 
+            </p>
+        </div>
+        </div>
+
+       
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="white-text">Reference Material</h5>
+          <ul>
+            <li><a class="orange-text text-lighten-3" href="https://dl.acm.org/doi/10.1145/3232755.3232857">Fullbackoff1 variant and Fullbackoff2 variant Paper</a></li>
+            <li><a class="orange-text text-lighten-3" href="https://github.com/contiki-os/contiki">Contiki OS Repository</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+     <a class="orange-text text-lighten-3" href="http://wing.nitk.ac.in">Wireless Information Networking Group (WiNG),</a> NITK Surathkal, India.
+      </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
